@@ -2,7 +2,7 @@ body {
   margin: 0;
   text-align: center;
   padding-bottom: 140px;
-  overflow: hidden;
+  overflow: auto;
   background-image: url("bilder/ChatGPT\ Image\ 4.\ mars\ 2026\,\ 10_11_40.png");
   background-size: cover;
   background-position: center;
@@ -100,7 +100,7 @@ footer {
     transition: 0.3s;
 }
 .navbar a:hover {
-    background-color: #8b0000;
+    background-color: #c4bd8b;
 }
 
 .booking-wrap {
