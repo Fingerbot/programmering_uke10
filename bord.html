@@ -12,13 +12,99 @@
 </head>
 
 <body>
+  <main class="booking-wrap">
+    <section class="booking-card">
+      <h1>Bestill bord</h1>
+      <p class="booking-sub">Fyll inn informasjonen under, så reserverer vi bordet.</p>
 
+      <form id="bookingForm" class="booking-form">
+        <div class="row">
+          <label>
+            Navn
+            <input type="text" name="name" required placeholder="Ditt navn" />
+          </label>
+
+          <label>
+            Telefon
+            <input type="tel" name="phone" required placeholder="+47 ..." />
+          </label>
+        </div>
+
+        <div class="row">
+          <label>
+            Dato
+            <input type="date" name="date" required />
+          </label>
+
+          <label>
+            Klokkeslett
+            <input type="time" name="time" required />
+          </label>
+        </div>
+
+        <div class="row">
+          <label>
+            Antall personer
+            <input type="number" name="guests" min="1" max="20" required value="2" />
+          </label>
+
+          <label>
+            Allergier / kommentar
+            <input type="text" name="notes" placeholder="Valgfritt" />
+          </label>
+        </div>
+
+        <button type="submit">Send bestilling</button>
+
+        <p id="confirmMsg" class="confirm" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
 
   <footer>
     <nav class="navbar">
       <ul>
         <li><a href="index.html">Forside</a></li>
         <li><a href="om.html">Om Spiseri</a></li>
+        <li><a href="bord.html">Bestill bord</a></li>
+        <li><a href="galleri.html">Galleri</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script>
+    // Simple frontend-only confirmation (no backend)
+    const form = document.getElementById("bookingForm");
+    const msg = document.getElementById("confirmMsg");
+
+    // Set min date to today
+    const dateInput = form.querySelector('input[name="date"]');
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, "0");
+    const dd = String(today.getDate()).padStart(2, "0");
+    dateInput.min = `${yyyy}-${mm}-${dd}`;
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const data = new FormData(form);
+      const name = data.get("name");
+      const guests = data.get("guests");
+      const date = data.get("date");
+      const time = data.get("time");
+
+      msg.textContent = `Takk, ${name}! Bestilling mottatt for ${guests} personer den ${date} kl. ${time}.`;
+      form.reset();
+      dateInput.min = `${yyyy}-${mm}-${dd}`;
+    });
+  </script>
+
+  <footer>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Forside</a></li>
+        <li><a href="meny.html">Meny</a></li>
         <li><a href="bord.html">Bestill bord</a></li>
         <li><a href="galleri.html">Galleri</a></li>
       </ul>

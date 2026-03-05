@@ -1,6 +1,7 @@
 body {
   margin: 0;
   text-align: center;
+  padding-bottom: 140px;
   overflow: hidden;
   background-image: url("bilder/ChatGPT\ Image\ 4.\ mars\ 2026\,\ 10_11_40.png");
   background-size: cover;
@@ -49,7 +50,7 @@ p {
     font-weight: 400;
 }
 
-.om-spiseri {
+/* .om-spiseri {
     max-width: 700px;
     margin: 60px auto;
     background: rgba(150, 144, 92, 0.75);
@@ -68,7 +69,7 @@ p {
     line-height: 1.7;
     text-align: center;
     padding: 20px;
-}
+} */
 
 .logo-hoved {
   width: 10%;
@@ -100,4 +101,85 @@ footer {
 }
 .navbar a:hover {
     background-color: #8b0000;
+}
+
+.booking-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px 140px;
+}
+
+.booking-card {
+  width: 100%;
+  max-width: 700px;
+  background: rgba(150, 144, 92, 0.75);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  padding: 30px;
+}
+
+.booking-card h1 {
+  font-family: "Italiana", serif;
+  color: white;
+  font-size: 48px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.booking-sub {
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.booking-form .row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.booking-form label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+}
+
+.booking-form input {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(0,0,0,0.25);
+  color: white;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.booking-form input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.booking-form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.confirm {
+  margin-top: 15px;
+  color: white;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
 }
