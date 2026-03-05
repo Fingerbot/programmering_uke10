@@ -183,3 +183,45 @@ footer {
   text-align: center;
   font-family: "Quicksand", sans-serif;
 }
+
+.meny-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px 140px;
+}
+
+.meny-card {
+  max-width: 700px;
+  width: 100%;
+  background: rgba(150,144,92,0.75);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  padding: 30px 40px;
+}
+
+.meny-card h1 {
+  font-family: "Italiana", serif;
+  color: white;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.meny-card h2 {
+  font-family: "Italiana", serif;
+  color: white;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.meny-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.meny-card li {
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
